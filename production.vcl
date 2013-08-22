@@ -10,11 +10,6 @@ sub vcl_deliver {
 }
 
 sub vcl_error {
-    if (obj.status >= 400 && obj.status <= 499 ) {
-        include "error-404.vcl";
-        return (deliver);
-    } else {
-        include "error.vcl";
-        return (deliver);
-    }
+    include "error.vcl";
+    return (deliver);
 }
