@@ -24,6 +24,12 @@ sub vcl_deliver {
     unset resp.http.X-Varnish;
 }
 
+sub vcl_hash {
+    if (req.http.X-Forwarded-Proto) {
+        hash_data(req.http.X-Forwarded-Proto);
+    }
+}
+
 sub vcl_error {
     include "error.vcl";
     return (deliver);
