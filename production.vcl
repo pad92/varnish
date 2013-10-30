@@ -1,5 +1,20 @@
 include "backend.vcl";
 
+sub vcl_recv {
+    set client.identity = req.http.cookie;
+    if ( req.http.X-Forwarded-Proto !~ "(?i)https") {
+        set req.http.X-Forwarded-Proto = "http";
+    }
+    if (!req.backend.healthy) {
+        set req.grace = 1h;
+    }
+    if (req.http.x-forwarded-for) {
+        set req.http.X-Forwarded-For = req.http.X-Forwarded-For + ", " + client.ip;
+    } else {
+        set req.http.X-Forwarded-For = client.ip;
+    }
+}
+
 sub vcl_deliver {
     unset resp.http.Link;
     unset resp.http.Server;
