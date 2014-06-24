@@ -28,6 +28,12 @@ sub vcl_deliver {
     unset resp.http.X-CF-Powered-By;
 }
 
+sub vcl_hash {
+    if (req.http.X-Forwarded-Proto) {
+        hash_data(req.http.X-Forwarded-Proto);
+    }
+}
+
 sub vcl_backend_response {
 #   stream if size > 9Mb
 #   From http://stackoverflow.com/a/23065861
