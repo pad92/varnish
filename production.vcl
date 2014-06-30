@@ -15,6 +15,10 @@ sub vcl_recv {
     }
     set req.http.X-Full-Uri = req.http.host + req.url;
     }
+    set req.http.Surrogate-Capability = "key=ESI/1.0";
+#   if (req.http.Content-Length !~ "[0-9]{7,}") {
+#       return (pipe);
+#   }
 }
 
 sub vcl_deliver {
@@ -34,18 +38,19 @@ sub vcl_hash {
     }
 }
 
-sub vcl_backend_response {
-#   stream if size > 9Mb
-#   From http://stackoverflow.com/a/23065861
-    if (beresp.http.Content-Length ~ "[0-9]{7,}" ) {
-        set beresp.do_stream = true;
-    }
-}
-
 sub vcl_pipe {
 #   http://www.varnish-cache.org/ticket/451
 #   This forces every pipe request to be the first one.
     set bereq.http.connection = "close";
+}
+
+sub vcl_backend_response {
+    if (beresp.http.Surrogate-Control ~ "ESI/1.0") {
+        unset beresp.http.Surrogate-Control;
+        set beresp.do_esi = true;
+    }
+    if (beresp.http.Content-Type ~ "(image|audio|video|pdf|flash)") { set beresp.do_gzip = false; }
+    if (beresp.http.Content-Type ~ "text")                          { set beresp.do_gzip = true; }
 }
 
 sub vcl_backend_error {
