@@ -18,6 +18,15 @@ synthetic( {"
         <style>
             body {
                 padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+                text-align: center;
+            }
+            .footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                /* Set the fixed height of the footer here */
+                height: 60px;
+                background-color: #f5f5f5;
             }
             #homer *
             {
@@ -331,276 +340,276 @@ synthetic( {"
 
             @keyframes homerlefteyelidbottom
             {
-            0% {bottom: -11px;}
-            2% {bottom: 0px;}
-            4% {bottom: -11px;}
-            100% {bottom: -11px;}
+                0% {bottom: -11px;}
+                2% {bottom: 0px;}
+                4% {bottom: -11px;}
+                100% {bottom: -11px;}
             }
 
             #homer .head .right-eye .eyelid-top
             {
-            top: -18px;
-            left: 0px;
-            width: 30px;
-            height: 17px;
-            border-bottom: 1px solid #110b00;
-            border-radius: 50% 50% 0 0;
+                top: -18px;
+                left: 0px;
+                width: 30px;
+                height: 17px;
+                border-bottom: 1px solid #110b00;
+                border-radius: 50% 50% 0 0;
 
-            -webkit-animation-name: homerrighteyelidtop;
-            -webkit-animation-duration: 10s;
-            -webkit-animation-timing-function: linear;
-            -webkit-animation-delay: 1s;
-            -webkit-animation-iteration-count: infinite;
-            -webkit-animation-play-state: running;
-            animation-name: homerrighteyelidtop;
-            animation-duration: 10s;
-            animation-timing-function: linear;
-            animation-delay: 1s;
-            animation-iteration-count: infinite;
-            animation-play-state: running;
+                -webkit-animation-name: homerrighteyelidtop;
+                -webkit-animation-duration: 10s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-delay: 1s;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-play-state: running;
+                animation-name: homerrighteyelidtop;
+                animation-duration: 10s;
+                animation-timing-function: linear;
+                animation-delay: 1s;
+                animation-iteration-count: infinite;
+                animation-play-state: running;
             }
 
             #homer .head .right-eye .eyelid-bottom
             {
-            bottom: -11px;
-            left: 0px;
-            width: 30px;
-            height: 10px;
-            border-top: 1px solid #110b00;
-            border-radius: 0 0 50% 50%;
+                bottom: -11px;
+                left: 0px;
+                width: 30px;
+                height: 10px;
+                border-top: 1px solid #110b00;
+                border-radius: 0 0 50% 50%;
 
-            -webkit-animation-name: homerrighteyelidbottom;
-            -webkit-animation-duration: 10s;
-            -webkit-animation-timing-function: linear;
-            -webkit-animation-delay: 1s;
-            -webkit-animation-iteration-count: infinite;
-            -webkit-animation-play-state: running;
-            animation-name: homerrighteyelidbottom;
-            animation-duration: 10s;
-            animation-timing-function: linear;
-            animation-delay: 1s;
-            animation-iteration-count: infinite;
-            animation-play-state: running;
+                -webkit-animation-name: homerrighteyelidbottom;
+                -webkit-animation-duration: 10s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-delay: 1s;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-play-state: running;
+                animation-name: homerrighteyelidbottom;
+                animation-duration: 10s;
+                animation-timing-function: linear;
+                animation-delay: 1s;
+                animation-iteration-count: infinite;
+                animation-play-state: running;
             }
 
             @-webkit-keyframes homerrighteyelidtop
             {
-            0% {top: -18px;}
-            2% {top: 0px;}
-            4% {top: -18px;}
-            100% {top: -18px;}
+                0% {top: -18px;}
+                2% {top: 0px;}
+                4% {top: -18px;}
+                100% {top: -18px;}
             }
 
             @keyframes homerrighteyelidtop
             {
-            0% {top: -18px;}
-            2% {top: 0px;}
-            4% {top: -18px;}
-            100% {top: -18px;}
+                0% {top: -18px;}
+                2% {top: 0px;}
+                4% {top: -18px;}
+                100% {top: -18px;}
             }
 
             @-webkit-keyframes homerrighteyelidbottom
             {
-            0% {bottom: -11px;}
-            2% {bottom: 0px;}
-            4% {bottom: -11px;}
-            100% {bottom: -11px;}
+                0% {bottom: -11px;}
+                2% {bottom: 0px;}
+                4% {bottom: -11px;}
+                100% {bottom: -11px;}
             }
 
             @keyframes homerrighteyelidbottom
             {
-            0% {bottom: -11px;}
-            2% {bottom: 0px;}
-            4% {bottom: -11px;}
-            100% {bottom: -11px;}
+                0% {bottom: -11px;}
+                2% {bottom: 0px;}
+                4% {bottom: -11px;}
+                100% {bottom: -11px;}
             }
 
             #homer .head .nose
             {
-            top: 71px;
-            left: 50px;
-            width: 18px;
-            height: 12px;
-            border-left: none;
-            border-right: none;
-            -webkit-transform: rotate(-13deg);
-            -ms-transform: rotate(-13deg);
-            transform: rotate(-13deg);
+                top: 71px;
+                left: 50px;
+                width: 18px;
+                height: 12px;
+                border-left: none;
+                border-right: none;
+                -webkit-transform: rotate(-13deg);
+                -ms-transform: rotate(-13deg);
+                transform: rotate(-13deg);
             }
 
             #homer .head .nose-tip
             {
-            top: 69px;
-            left: 60px;
-            width: 14px;
-            height: 12px;
-            border-left: none;
-            -moz-border-radius: 0 50% 50% 0%;
-            -webkit-border-radius: 0 50% 50% 0;
-            border-radius: 0 50% 50% 0;
-            -webkit-transform: rotate(-13deg);
-            -ms-transform: rotate(-13deg);
-            transform: rotate(-13deg);
+                top: 69px;
+                left: 60px;
+                width: 14px;
+                height: 12px;
+                border-left: none;
+                -moz-border-radius: 0 50% 50% 0%;
+                -webkit-border-radius: 0 50% 50% 0;
+                border-radius: 0 50% 50% 0;
+                -webkit-transform: rotate(-13deg);
+                -ms-transform: rotate(-13deg);
+                transform: rotate(-13deg);
             }
 
             #homer .head .neck1
             {
-            top: 85px;
-            left: 16px;
-            width: 6px;
-            height: 31px;
-            background: transparent;
-            border-right: 1px solid #110b00;
-            border-radius: 50% 50% 25% 50%;
-            -webkit-transform: rotate(-14deg);
-            -ms-transform: rotate(-14deg);
-            transform: rotate(-14deg);
-            -webkit-box-shadow: 2px 0px 0px 0px rgba(247,254,140,1), 5px 0px 0px 0px rgba(251,216,0,1);
-            -moz-box-shadow: 2px 0px 0px 0px rgba(247,254,140,1), 5px 0px 0px 0px rgba(251,216,0,1);
-            box-shadow: 2px 0px 0px 0px rgba(247,254,140,1), 5px 0px 0px 0px rgba(251,216,0,1);
+                top: 85px;
+                left: 16px;
+                width: 6px;
+                height: 31px;
+                background: transparent;
+                border-right: 1px solid #110b00;
+                border-radius: 50% 50% 25% 50%;
+                -webkit-transform: rotate(-14deg);
+                -ms-transform: rotate(-14deg);
+                transform: rotate(-14deg);
+                -webkit-box-shadow: 2px 0px 0px 0px rgba(247,254,140,1), 5px 0px 0px 0px rgba(251,216,0,1);
+                -moz-box-shadow: 2px 0px 0px 0px rgba(247,254,140,1), 5px 0px 0px 0px rgba(251,216,0,1);
+                box-shadow: 2px 0px 0px 0px rgba(247,254,140,1), 5px 0px 0px 0px rgba(251,216,0,1);
             }
 
             #homer .head .neck2
             {
-            top: 114px;
-            left: 25px;
-            width: 45px;
-            height: 19px;
-            border-top: none;
-            border-bottom: none;
-            -webkit-box-shadow: inset 2px 0px 0px 0px rgba(247,254,140,1);
-            -moz-box-shadow: inset 2px 0px 0px 0px rgba(247,254,140,1);
-            box-shadow: inset 2px 0px 0px 0px rgba(247,254,140,1);
+                top: 114px;
+                left: 25px;
+                width: 45px;
+                height: 19px;
+                border-top: none;
+                border-bottom: none;
+                -webkit-box-shadow: inset 2px 0px 0px 0px rgba(247,254,140,1);
+                -moz-box-shadow: inset 2px 0px 0px 0px rgba(247,254,140,1);
+                box-shadow: inset 2px 0px 0px 0px rgba(247,254,140,1);
             }
 
             #homer .head .mouth1
             {
-            top: 86px;
-            left: 28px;
-            width: 48px;
-            height: 44px;
-            background: #cfae67;
-            -moz-border-radius: 46% 52% 44% 50%;
-            -webkit-border-radius: 46% 52% 44% 50%;
-            border-radius: 46% 52% 44% 50%;
-            -webkit-box-shadow: inset -1px -1px 0px 0px rgba(152,110,36,1);
-            -moz-box-shadow: inset -1px -1px 0px 0px rgba(152,110,36,1);
-            box-shadow: inset -1px -1px 0px 0px rgba(152,110,36,1);
+                top: 86px;
+                left: 28px;
+                width: 48px;
+                height: 44px;
+                background: #cfae67;
+                -moz-border-radius: 46% 52% 44% 50%;
+                -webkit-border-radius: 46% 52% 44% 50%;
+                border-radius: 46% 52% 44% 50%;
+                -webkit-box-shadow: inset -1px -1px 0px 0px rgba(152,110,36,1);
+                -moz-box-shadow: inset -1px -1px 0px 0px rgba(152,110,36,1);
+                box-shadow: inset -1px -1px 0px 0px rgba(152,110,36,1);
             }
 
             #homer .head .mouth2
             {
-            top: 101px;
-            left: 43px;
-            width: 48px;
-            height: 12px;
-            background: #cfae67;
-            -moz-border-radius: 46% 52% 44% 50%;
-            -webkit-border-radius: 46% 52% 44% 50%;
-            border-radius: 46% 52% 44% 50%;
-            -webkit-transform: rotate(-15deg);
-            -ms-transform: rotate(-15deg);
-            transform: rotate(-15deg);
-            -webkit-box-shadow: inset -1px 0px 0px 0px rgba(152,110,36,1);
-            -moz-box-shadow: inset -1px 0px 0px 0px rgba(152,110,36,1);
-            box-shadow: inset -1px 0px 0px 0px rgba(152,110,36,1);
+                top: 101px;
+                left: 43px;
+                width: 48px;
+                height: 12px;
+                background: #cfae67;
+                -moz-border-radius: 46% 52% 44% 50%;
+                -webkit-border-radius: 46% 52% 44% 50%;
+                border-radius: 46% 52% 44% 50%;
+                -webkit-transform: rotate(-15deg);
+                -ms-transform: rotate(-15deg);
+                transform: rotate(-15deg);
+                -webkit-box-shadow: inset -1px 0px 0px 0px rgba(152,110,36,1);
+                -moz-box-shadow: inset -1px 0px 0px 0px rgba(152,110,36,1);
+                box-shadow: inset -1px 0px 0px 0px rgba(152,110,36,1);
             }
 
             #homer .head .mouth3
             {
-            top: 102px;
-            left: 35px;
-            width: 48px;
-            height: 12px;
-            background: transparent;
-            -moz-border-radius: 46% 52% 44% 50%;
-            -webkit-border-radius: 46% 52% 44% 50%;
-            border-radius: 46% 52% 44% 50%;
-            border-bottom: 1px solid #110b00;
-            -webkit-transform: rotate(-4deg);
-            -ms-transform: rotate(-4deg);
-            transform: rotate(-4deg);
+                top: 102px;
+                left: 35px;
+                width: 48px;
+                height: 12px;
+                background: transparent;
+                -moz-border-radius: 46% 52% 44% 50%;
+                -webkit-border-radius: 46% 52% 44% 50%;
+                border-radius: 46% 52% 44% 50%;
+                border-bottom: 1px solid #110b00;
+                -webkit-transform: rotate(-4deg);
+                -ms-transform: rotate(-4deg);
+                transform: rotate(-4deg);
             }
 
             #homer .head .mouth4
             {
-            top: 110px;
-            left: 38px;
-            width: 7px;
-            height: 5px;
-            -moz-border-radius: 50%;
-            -webkit-border-radius: 50%;
-            border-radius: 50%;
-            border-top: 1px solid #110b00;
-            -webkit-transform: rotate(-81deg);
-            -ms-transform: rotate(-81deg);
-            transform: rotate(-81deg);
+                top: 110px;
+                left: 38px;
+                width: 7px;
+                height: 5px;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                border-top: 1px solid #110b00;
+                -webkit-transform: rotate(-81deg);
+                -ms-transform: rotate(-81deg);
+                transform: rotate(-81deg);
             }
 
             #homer .head .mouth5
             {
-            top: 84px;
-            left: 64px;
-            width: 27px;
-            height: 13px;
-            background: transparent;
-            -moz-border-radius: 46% 52% 44% 50%;
-            -webkit-border-radius: 46% 52% 44% 50%;
-            border-radius: 46% 52% 44% 50%;
-            -webkit-transform: rotate(-131deg);
-            -ms-transform: rotate(-131deg);
-            transform: rotate(-131deg);
-            border-top: none;
-            -webkit-box-shadow: inset -1px -1px 0px 0px rgba(152,110,36,1);
-            -moz-box-shadow: inset -1px -1px 0px 0px rgba(152,110,36,1);
-            box-shadow: inset -1px -1px 0px 0px rgba(152,110,36,1);
+                top: 84px;
+                left: 64px;
+                width: 27px;
+                height: 13px;
+                background: transparent;
+                -moz-border-radius: 46% 52% 44% 50%;
+                -webkit-border-radius: 46% 52% 44% 50%;
+                border-radius: 46% 52% 44% 50%;
+                -webkit-transform: rotate(-131deg);
+                -ms-transform: rotate(-131deg);
+                transform: rotate(-131deg);
+                border-top: none;
+                -webkit-box-shadow: inset -1px -1px 0px 0px rgba(152,110,36,1);
+                -moz-box-shadow: inset -1px -1px 0px 0px rgba(152,110,36,1);
+                box-shadow: inset -1px -1px 0px 0px rgba(152,110,36,1);
             }
 
             #homer .head .mouth6
             {
-            top: 84px;
-            left: 46px;
-            width: 32px;
-            height: 31px;
-            background: #cfae67;
-            -webkit-transform: rotate(-18deg);
-            -ms-transform: rotate(-18deg);
-            transform: rotate(-18deg);
-            -moz-border-radius: 0 0 0px 22px;
-            -webkit-border-radius: 0 0 0px 22px;
-            border-radius: 0 0 0px 22px;
+                top: 84px;
+                left: 46px;
+                width: 32px;
+                height: 31px;
+                background: #cfae67;
+                -webkit-transform: rotate(-18deg);
+                -ms-transform: rotate(-18deg);
+                transform: rotate(-18deg);
+                -moz-border-radius: 0 0 0px 22px;
+                -webkit-border-radius: 0 0 0px 22px;
+                border-radius: 0 0 0px 22px;
             }
 
             #homer .head .mouth7
             {
-            top: 104px;
-            left: 62px;
-            width: 17px;
-            height: 12px;
-            background: #cfae67;
-            -moz-border-radius: 46% 52% 44% 50%;
-            -webkit-border-radius: 46% 52% 44% 50%;
-            border-radius: 46% 52% 44% 50%;
-            border-left: none;
-            border-bottom: none;
-            -webkit-transform: rotate(6deg);
-            -ms-transform: rotate(6deg);
-            transform: rotate(6deg);
+                top: 104px;
+                left: 62px;
+                width: 17px;
+                height: 12px;
+                background: #cfae67;
+                -moz-border-radius: 46% 52% 44% 50%;
+                -webkit-border-radius: 46% 52% 44% 50%;
+                border-radius: 46% 52% 44% 50%;
+                border-left: none;
+                border-bottom: none;
+                -webkit-transform: rotate(6deg);
+                -ms-transform: rotate(6deg);
+                transform: rotate(6deg);
             }
 
             #homer .head .mouth8
             {
-            top: 79px;
-            left: 71px;
-            width: 15px;
-            height: 30px;
-            background: #cfae67;
-            -moz-border-radius: 50%;
-            -webkit-border-radius: 50%;
-            border-radius: 50%;
-            -webkit-transform: rotate(-30deg);
-            -ms-transform: rotate(-30deg);
-            transform: rotate(-30deg);
+                top: 79px;
+                left: 71px;
+                width: 15px;
+                height: 30px;
+                background: #cfae67;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                -webkit-transform: rotate(-30deg);
+                -ms-transform: rotate(-30deg);
+                transform: rotate(-30deg);
             }
         </style>
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -668,17 +677,16 @@ synthetic( {"
                         </div>
                     </div>
                 </div>
-                <h1 class="pagination-centered">Error "} + beresp.status + " " + beresp.reason + {"</h1>
+                <h1 class="pagination-centered,text-capitalize">We're very sorry, but the page could not be loaded properly.<br \>
+                    <small>This should be fixed very soon, and we apologize for any inconvenience.</small>
+                </h1>
             </div>
-            <div class="alert alert-error pagination-centered">
-                <i class="icon-warning-sign"></i>
-                We're very sorry, but the page could not be loaded properly.
-                <i class="icon-warning-sign"></i>
-            </div>
-            <blockquote>This should be fixed very soon, and we apologize for any inconvenience.</blockquote>
         </div>
-        <footer class="container pagination-centered">
-        </footer>
+        <div class="footer">
+            <div class="container">
+                <p class="text-muted,text-capitalize">Error "} + beresp.status + " " + beresp.reason + {"</p>
+            </div>
+        </div>
         <script src="//code.jquery.com/jquery.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     </body>
