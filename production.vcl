@@ -1,5 +1,6 @@
 vcl 4.0;
 include "backend.vcl";
+#include "acl.vcl";
 
 sub vcl_recv {
     if ( req.url ~ "^/w00tw00t")                    { return (synth(404, "Not Found")); }
@@ -35,16 +36,10 @@ sub vcl_hash {
 }
 
 sub vcl_backend_response {
-    if (beresp.http.Content-Length ~ "[0-9]{7,}") {
-        set beresp.do_stream = true;
-        set beresp.do_gzip = false;
-    }
     if (beresp.http.Surrogate-Control ~ "ESI/1.0") {
         unset beresp.http.Surrogate-Control;
         set beresp.do_esi = true;
     }
-    if (beresp.http.Content-Type ~ "(image|audio|video|pdf|flash)") { set beresp.do_gzip = false; }
-    if (beresp.http.Content-Type ~ "text")                          { set beresp.do_gzip = true; }
 }
 
 sub vcl_backend_error {
