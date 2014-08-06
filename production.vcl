@@ -14,7 +14,6 @@ sub vcl_recv {
         }
     }
     set req.http.X-Full-Uri = req.http.host + req.url;
-    }
     set req.http.Surrogate-Capability = "key=ESI/1.0";
 }
 
