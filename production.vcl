@@ -3,13 +3,10 @@ import std;
 
 include "acl.vcl";
 include "backend.vcl";
-#include "acl.vcl";
 
 sub vcl_recv {
     if ( req.url ~ "^/w00tw00t")                    { return (synth(404, "Not Found")); }
     if ( req.http.X-Forwarded-Proto !~ "(?i)https") { set req.http.X-Forwarded-Proto = "http"; }
-<<<<<<< HEAD
-=======
 
     if (req.method == "PURGE") {
         if (!client.ip ~ purge) {
@@ -17,7 +14,6 @@ sub vcl_recv {
         }
         return (purge);
     }
->>>>>>> master
 
     if (req.restarts == 0) {
         if (req.http.x-forwarded-for) {
@@ -27,11 +23,7 @@ sub vcl_recv {
         }
     }
     set req.http.X-Full-Uri = req.http.host + req.url;
-<<<<<<< HEAD
-    set req.http.Surrogate-Capability = "key=ESI/1.0";
-=======
     include "recv_clean.vcl";
-
     set req.http.Surrogate-Capability = "key=ESI/1.0";
 
     include "recv.vcl";
@@ -44,7 +36,6 @@ sub vcl_backend_response {
         set beresp.do_esi = true;
     }
     include "backend_response.vcl";
->>>>>>> master
 }
 
 
@@ -94,8 +85,6 @@ sub vcl_backend_response {
     }
 }
 
-<<<<<<< HEAD
-=======
 sub vcl_pipe {
     if (req.http.upgrade) {
         set bereq.http.upgrade = req.http.upgrade;
@@ -106,7 +95,6 @@ sub vcl_pipe {
     set bereq.http.connection = "close";
 }
 
->>>>>>> master
 sub vcl_backend_error {
     set beresp.http.Content-Type = "text/html; charset=utf-8";
     set beresp.http.Retry-After = "5";
