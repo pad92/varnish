@@ -1,10 +1,23 @@
 vcl 4.0;
+import std;
+
+include "acl.vcl";
 include "backend.vcl";
 #include "acl.vcl";
 
 sub vcl_recv {
     if ( req.url ~ "^/w00tw00t")                    { return (synth(404, "Not Found")); }
     if ( req.http.X-Forwarded-Proto !~ "(?i)https") { set req.http.X-Forwarded-Proto = "http"; }
+<<<<<<< HEAD
+=======
+
+    if (req.method == "PURGE") {
+        if (!client.ip ~ purge) {
+            return(synth(404, "Not Found"));
+        }
+        return (purge);
+    }
+>>>>>>> master
 
     if (req.restarts == 0) {
         if (req.http.x-forwarded-for) {
@@ -14,8 +27,40 @@ sub vcl_recv {
         }
     }
     set req.http.X-Full-Uri = req.http.host + req.url;
+<<<<<<< HEAD
     set req.http.Surrogate-Capability = "key=ESI/1.0";
+=======
+    include "recv_clean.vcl";
+
+    set req.http.Surrogate-Capability = "key=ESI/1.0";
+
+    include "recv.vcl";
 }
+
+sub vcl_backend_response {
+    set beresp.do_stream = true;
+    if (beresp.http.Surrogate-Control ~ "ESI/1.0") {
+        unset beresp.http.Surrogate-Control;
+        set beresp.do_esi = true;
+    }
+    include "backend_response.vcl";
+>>>>>>> master
+}
+
+
+sub vcl_hit {
+    if (!std.healthy(req.backend_hint)) {
+#       backend is sick - use full grace
+        if (obj.ttl + obj.grace > 0s) {
+            set req.http.grace = "full";
+            return (deliver);
+        } else {
+#           no graced object.
+            return (fetch);
+        }
+    }
+}
+
 
 sub vcl_deliver {
     unset resp.http.Link;
@@ -34,6 +79,14 @@ sub vcl_hash {
     }
 }
 
+sub vcl_pipe {
+    if (req.http.upgrade) {
+        set bereq.http.upgrade = req.http.upgrade;
+    }
+    set bereq.http.connection = "close";
+}
+
+
 sub vcl_backend_response {
     if (beresp.http.Surrogate-Control ~ "ESI/1.0") {
         unset beresp.http.Surrogate-Control;
@@ -41,7 +94,22 @@ sub vcl_backend_response {
     }
 }
 
+<<<<<<< HEAD
+=======
+sub vcl_pipe {
+    if (req.http.upgrade) {
+        set bereq.http.upgrade = req.http.upgrade;
+    }
+
+#   http://www.varnish-cache.org/ticket/451
+#   This forces every pipe request to be the first one.
+    set bereq.http.connection = "close";
+}
+
+>>>>>>> master
 sub vcl_backend_error {
+    set beresp.http.Content-Type = "text/html; charset=utf-8";
+    set beresp.http.Retry-After = "5";
     include "error.vcl";
     return (deliver);
 }
