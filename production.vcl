@@ -24,7 +24,6 @@ sub vcl_recv {
     }
     set req.http.X-Full-Uri = req.http.host + req.url;
     include "recv_clean.vcl";
-
     set req.http.Surrogate-Capability = "key=ESI/1.0";
 
     include "recv.vcl";
@@ -80,10 +79,9 @@ sub vcl_pipe {
 
 
 sub vcl_backend_response {
-#   stream if size > 9Mb
-#   From http://stackoverflow.com/a/23065861
-    if (beresp.http.Content-Length ~ "[0-9]{7,}" ) {
-        set beresp.do_stream = true;
+    if (beresp.http.Surrogate-Control ~ "ESI/1.0") {
+        unset beresp.http.Surrogate-Control;
+        set beresp.do_esi = true;
     }
 }
 
