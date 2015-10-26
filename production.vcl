@@ -54,14 +54,15 @@ sub vcl_hit {
 
 
 sub vcl_deliver {
+    unset resp.http.Composed-By;
     unset resp.http.Link;
     unset resp.http.Server;
     unset resp.http.Via;
+    unset resp.http.X-CF-Powered-By;
     unset resp.http.X-Drupal-Cache;
+    unset resp.http.X-Generator;
     unset resp.http.X-Powered-By;
     unset resp.http.X-Varnish;
-    unset resp.http.Composed-By;
-    unset resp.http.X-CF-Powered-By;
 }
 
 sub vcl_hash {
