@@ -3,7 +3,7 @@ synthetic( {"
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>"} + beresp.status + " " + beresp.reason + {"</title>
+        <title>"} + resp.status + " " + resp.reason + {"</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Backend Error page">
         <meta name="author" content="Pascal A.">
@@ -682,7 +682,7 @@ synthetic( {"
         </div>
         <div class="footer">
             <div class="container">
-                <p class="text-muted,text-capitalize">Error "} + beresp.status + " " + beresp.reason + {"</p>
+                <p class="text-muted,text-capitalize">Error "} + resp.status + " " + resp.reason + {"</p>
             </div>
         </div>
         <footer class="container pagination-centered">

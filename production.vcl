@@ -96,9 +96,10 @@ sub vcl_pipe {
     set bereq.http.connection = "close";
 }
 
-sub vcl_backend_error {
-    set beresp.http.Content-Type = "text/html; charset=utf-8";
-    set beresp.http.Retry-After = "5";
+
+sub vcl_synth {
+    set resp.http.Content-Type = "text/html; charset=utf-8";
+    set resp.http.Retry-After = "5";
     include "error.vcl";
     return (deliver);
 }
