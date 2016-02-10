@@ -1,4 +1,3 @@
-synthetic( {"
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,8 +9,8 @@ synthetic( {"
         <meta name="generator" content="vim">
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
         <!-- Le styles -->
-        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/simplex/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/simplex/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet">
         <style>
             body {
@@ -617,78 +616,77 @@ synthetic( {"
     </head>
     <body>
         <div class="container">
-            <div class="page-header">
-                <div id="homer">
-                    <div class="head">
+            <div class="jumbotron">
 
-                        <!-- Hair and top of head -->
-                        <div class="hair1"></div>
-                        <div class="hair2"></div>
-                        <div class="body head-top"></div>
-                        <div class="no-border body head-main"></div>
+                <div class="body-content">
+                    <div id="homer">
+                        <div class="head">
+                            <!-- Hair and top of head -->
+                            <div class="hair1"></div>
+                            <div class="hair2"></div>
+                            <div class="body head-top"></div>
+                            <div class="no-border body head-main"></div>
 
-                        <!-- The 'M' above the ear -->
-                        <div class="no-border m1"></div>
-                        <div class="no-border m2"></div>
-                        <div class="no-border m3"></div>
-                        <div class="no-border m4"></div>
+                            <!-- The 'M' above the ear -->
+                            <div class="no-border m1"></div>
+                            <div class="no-border m2"></div>
+                            <div class="no-border m3"></div>
+                            <div class="no-border m4"></div>
 
-                        <!-- The neck parts -->
-                        <div class="no-border neck1"></div>
-                        <div class="body neck2"></div>
+                            <!-- The neck parts -->
+                            <div class="no-border neck1"></div>
+                            <div class="body neck2"></div>
 
-                        <!-- The ear -->
-                        <div class="body ear">
-                            <div class="no-border inner1"></div>
-                            <div class="no-border inner2"></div>
-                            <div class="no-border body clip"></div>
+                            <!-- The ear -->
+                            <div class="body ear">
+                                <div class="no-border inner1"></div>
+                                <div class="no-border inner2"></div>
+                                <div class="no-border body clip"></div>
+                            </div>
+
+                            <!-- The mouth -->
+                            <div class="mouth">
+                                <div class="mouth5"></div>
+                                <div class="mouth2"></div>
+                                <div class="mouth1"></div>
+                                <div class="mouth7"></div>
+                                <div class="no-border mouth3"></div>
+                                <div class="no-border mouth4"></div>
+                                <div class="no-border mouth6"></div>
+                                <div class="no-border mouth8"></div>
+                            </div>
+
+                            <!-- The right eye -->
+                            <div class="right-eye">
+                                <div class="no-border right-eye-pupil"></div>
+                                <div class="no-border body eyelid-top"></div>
+                                <div class="no-border body eyelid-bottom"></div>
+                            </div>
+
+                            <!-- The nose -->
+                            <div class="body nose"></div>
+                            <div class="body nose-tip"></div>
+
+                            <!-- The left eye -->
+                            <div class="left-eye">
+                                <div class="no-border left-eye-pupil"></div>
+                                <div class="no-border body eyelid-top"></div>
+                                <div class="no-border body eyelid-bottom"></div>
+                            </div>
                         </div>
-
-                        <!-- The mouth -->
-                        <div class="mouth">
-                            <div class="mouth5"></div>
-                            <div class="mouth2"></div>
-                            <div class="mouth1"></div>
-                            <div class="mouth7"></div>
-                            <div class="no-border mouth3"></div>
-                            <div class="no-border mouth4"></div>
-                            <div class="no-border mouth6"></div>
-                            <div class="no-border mouth8"></div>
-                        </div>
-
-                        <!-- The right eye -->
-                        <div class="right-eye">
-                            <div class="no-border right-eye-pupil"></div>
-                            <div class="no-border body eyelid-top"></div>
-                            <div class="no-border body eyelid-bottom"></div>
-                        </div>
-
-                        <!-- The nose -->
-                        <div class="body nose"></div>
-                        <div class="body nose-tip"></div>
-
-                        <!-- The left eye -->
-                        <div class="left-eye">
-                            <div class="no-border left-eye-pupil"></div>
-                            <div class="no-border body eyelid-top"></div>
-                            <div class="no-border body eyelid-bottom"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2>We couldn't find what you're looking for on <em><span>"} + req.http.Host + {"</span></em>.</h2>
+                            <p class="lead">Error "} + resp.status + " " + resp.reason + {"</p>
+                            <p>This should be fixed very soon, and we apologize for any inconvenience.</p>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <h1 class="pagination-centered,text-capitalize">We're very sorry, but the page could not be loaded properly.<br \>
-                    <small>This should be fixed very soon, and we apologize for any inconvenience.</small>
-                </h1>
             </div>
         </div>
-        <div class="footer">
-            <div class="container">
-                <p class="text-muted,text-capitalize">Error "} + resp.status + " " + resp.reason + {"</p>
-            </div>
-        </div>
-        <footer class="container pagination-centered">
-        </footer>
         <script src="https://code.jquery.com/jquery.js"></script>
-        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </body>
 </html>
-"} );
