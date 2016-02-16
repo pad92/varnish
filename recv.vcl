@@ -1,13 +1,9 @@
-#if (req.http.host == "wordpress.domain.ltd") {
-#    set req.http.Cookie = regsuball(req.http.Cookie, "(^|;\s*)(_[_a-z]+|has_js)=[^;]*", "");
-#    set req.http.Cookie = regsub(req.http.Cookie, "^;\s*", "");
-#    if (req.url ~ "^/wp-content/uploads/" && (req.http.referer && (req.http.referer !~ "^http://wordpress.domain.ltd/") )) {
+#if (req.http.host ~ "(www\.|)wordpress\.domain\.ltd") {
+#    if (req.url ~ "^/wp-(login|cron\.php|admin)" && !client.ip ~ internal) {
+#        return (synth(403, "File is missing ;)"));
+#    } elsif (req.url ~ "^/wp-content/" && (req.http.referer && req.http.referer !~ "^(http|https)://(www\.|)wordpress\.domain\.ltd/")) {
 #        return (synth(403, "No hotlinking please"));
-#    }
-#    if (!(req.http.cookie ~ "wordpress_logged_in")) {
-#        unset req.http.cookie;
-#    }
-#    if (!req.http.cookie) {
+#    } elsif ( !(req.url ~ "wp-(login|admin)") && !(req.url ~ "&preview=true")  ) {
 #        unset req.http.cookie;
 #    }
 #}
