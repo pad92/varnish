@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+synthetic( {"<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -689,4 +689,4 @@
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </body>
-</html>
+</html>"} );
