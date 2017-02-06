@@ -103,3 +103,10 @@ sub vcl_synth {
     include "error.vcl";
     return (deliver);
 }
+
+sub vcl_backend_error {
+    set beresp.http.Content-Type = "text/html; charset=utf-8";
+    set beresp.http.Retry-After = "5";
+    include "error_backend.vcl";
+    return (deliver);
+}
