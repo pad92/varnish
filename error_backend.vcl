@@ -33,7 +33,7 @@ synthetic( {"
                 <div class="body-content">
                     <div class="row">
                         <div class="col">
-                            <h2>We couldn't find what you're looking for on <em><span>"} + beresp.http.Host + {"</span></em>.</h2>
+                            <h2>We couldn't find what you're looking for</h2>
                             <p class="lead">Error "} + beresp.status + " " + beresp.reason + {"</p>
                             <p>This should be fixed very soon, and we apologize for any inconvenience.</p>
                             </p>
