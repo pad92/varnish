@@ -45,9 +45,6 @@ sub vcl_hit {
         if (obj.ttl + obj.grace > 0s) {
             set req.http.grace = "full";
             return (deliver);
-        } else {
-#           no graced object.
-            return (fetch);
         }
     }
 }
