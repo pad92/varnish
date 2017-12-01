@@ -1,3 +1,8 @@
+language: bash
+
 before_script:
   - curl -s https://packagecloud.io/install/repositories/varnishcache/varnish5/script.deb.sh | sudo bash
   - sudo apt install varnish -y
+
+script:
+  - varnishd -C -f production.vcl
