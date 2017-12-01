@@ -1,0 +1,2 @@
+# varnish
+Minimalist Varnish configuration
