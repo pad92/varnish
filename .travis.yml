@@ -5,5 +5,6 @@ before_script:
   - sudo apt install varnish -y
 
 script:
-  - sudo pwd
-  - sudo ls
+  - sudo cp -r . /etc/varnish/
+  - sudo cp -y /etc/varnish/production.vcl /etc/varnish/default.vcl
+  - sudo service varnish restart
