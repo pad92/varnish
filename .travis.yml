@@ -5,6 +5,5 @@ before_script:
   - sudo apt install varnish -y
 
 script:
-  - pwd
-  - sudo varnishd -C -f /home/travis/build/pad92/varnish/production.vcl
-  - sudo varnishd -C -f ./production.vcl
+  - sudo pwd
+  - sudo ls
